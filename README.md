@@ -62,7 +62,5 @@ The database comprises several key entities and relationships designed to reflec
 ## Author
 
 **Sachin Mohandas**
-
 Boston University – MET CS 669: Database Design and Implementation
-
 Project Iteration 5 (December 2023)
