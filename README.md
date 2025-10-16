@@ -6,9 +6,9 @@
 
 ## Overview
 
-This project models a **centralized relational database** designed to standardize and streamline **electronic medical record (EMR)** management across Canada. Despite the country’s universal healthcare system, record accessibility and interoperability remain significant challenges. This database aims to address those issues by enabling physicians, pharmacists, and other healthcare professionals to securely share and update patient records across provinces.
+This project models a centralized relational database designed to standardize and streamline electronic medical record (EMR) management across Canada. Despite the country’s universal healthcare system, record accessibility and interoperability remain significant challenges. This database aims to address those issues by enabling physicians, pharmacists, and other healthcare professionals to securely share and update patient records across provinces.
 
-The model was implemented in **SQL Server** and follows **BCNF normalization**, featuring entity specialization/generalization, triggers for audit history, and optimized indexing for frequent healthcare queries.
+The model was implemented in **Microsoft SQL Server** and follows BCNF normalization, featuring entity specialization/generalization, triggers for audit history, and optimized indexing for frequent healthcare queries.
 
 ---
 
@@ -31,13 +31,13 @@ The database comprises several key entities and relationships designed to reflec
 
 ## Technical Features
 
-- **Normalization:** All tables satisfy **BCNF**, eliminating redundancy in province and prescription data.  
+- **Normalization:** All tables satisfy BCNF, eliminating redundancy in province and prescription data.  
 - **Triggers:** The `PatientHistoryTrigger` automatically logs updates to patient notes for historical traceability.  
 - **Indexes:** Added to optimize common queries by specialty, province, and visit date.  
 - **Subtype Entities:** Models specialization/generalization relationships such as:
   - `Physician` → `GP`, `Internist`, `Pediatrician`
   - `Patient` → `Male`, `Female`, `Intersex`
-- **Mock Data:** Populated using **Mockaroo** for realistic test scenarios across all provinces.
+- **Mock Data:** Populated using Mockaroo for realistic test scenarios across all provinces.
 
 ---
 
